@@ -24,6 +24,9 @@ plugins:
       kind: string
     - name: api_version
       value: 'v16.0'
+    - name: backoff_max_tries
+      kind: integer
+      value: 10
     config:
       insights_buffer_days: 7
 environments:

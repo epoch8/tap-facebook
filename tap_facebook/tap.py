@@ -74,6 +74,12 @@ class TapFacebook(Tap):
             th.DateTimeType,
             description="The latest record date to sync",
         ),
+        th.Property(
+            "backoff_max_tries",
+            th.IntegerType,
+            description="Number of retries before giving up",
+            default=10,
+        ),
     ).to_dict()
 
     def discover_streams(self) -> list[streams.FacebookStream]:

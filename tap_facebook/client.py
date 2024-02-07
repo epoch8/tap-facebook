@@ -167,4 +167,4 @@ class FacebookStream(RESTStream):
         Returns:
             int: limit
         """
-        return 20
+        return self.config["backoff_max_tries"]
