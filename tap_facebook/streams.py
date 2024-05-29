@@ -1273,8 +1273,8 @@ class AdAccountsStream(FacebookStream):
         "disable_reason",
         "end_advertiser",
         "end_advertiser_name",
-        "has_advertiser_opted_in_odax",
-        "has_migrated_permissions",
+        # "has_advertiser_opted_in_odax",
+        # "has_migrated_permissions",
         "id",
         "is_attribution_spec_system_default",
         "is_direct_deals_enabled",
@@ -1467,6 +1467,8 @@ class AdAccountsStream(FacebookStream):
         row["balance"] = int(row["balance"]) if "balance" in row else None
         row["min_campaign_group_spend_cap"] = int(row["min_campaign_group_spend_cap"]) if "min_campaign_group_spend_cap" in row else None
         row["spend_cap"] = int(row["spend_cap"]) if "spend_cap" in row else None
+        row["has_advertiser_opted_in_odax"] = True
+        row["has_migrated_permissions"] = True
         return row
 
 
